@@ -23,8 +23,9 @@ This github repository includes source code for this tool. This tool is also on 
 
 Now you can define as many transforms you want to and modify it's behaviour with additional parameters.
 
+When used for your project access ChangeTransforms function in TransformChanger. It has optional parameter defining desired Transform. If not filled, it has value of -1. That means Switch is made to next transform.
 
-
+Function ChangeTransforms is also a blueprint node.
 
 # Parameter Explanations
 
