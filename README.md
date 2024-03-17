@@ -3,8 +3,14 @@ Tool for real-time transform switching in Unreal Engine.
 
 This github repository includes source code for this tool. This tool is also on Unreal Engine marketplace as a free plugin. It is part of tools created for VR game [Next Move](https://www.meta.com/cs-cz/experiences/6785834628189984?ranking_trace=106799090815324_6785834628189984_QUESTSEARCH_1CIOhKO7vzRZvA7Ca_eyJwbGF0Zm9ybSI6ImFuZHJvaWQtNmRvZiIsInF1ZXJ5X3N0cmluZyI6Im5leHQgbW92ZSIsImxvY2FsZSI6ImNzX0NaIiwibnVtX2ZldGNoIjoxMDEsInNlYXJjaF9yb3V0ZSI6IndlYiIsInRhZ19pZHMiOltdfQ%3D%3D_eyJzZWN0aW9uX2tleSI6IlNFQVJDSCJ9) by [Typico Games](https://typicogames.com)
 
+# Use Cases
 
-# Setup
+This system enables you to create situations like:
+ - falling bridge
+ - magical bridge that repositions itself
+ - death trap
+
+# Base Setup
 
 1. Place TransformChanger Actor in viewport
 2. Group every actor you want to manipulate.
@@ -27,6 +33,10 @@ When used for your project access ChangeTransforms function in TransformChanger.
 
 Function ChangeTransforms is also a blueprint node.
 
+
+# Example Map
+
+In a content there is Example Map, where ChangeTransform function is triggered when player walks into Trigger box. There are several TransformChanger configurations with different use cases.
 
 # Sounds
 
