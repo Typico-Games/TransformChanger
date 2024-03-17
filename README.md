@@ -6,4 +6,27 @@ This github repository includes source code for this tool. This tool is also on 
 
 # Documentation
 
-This github repository includes source code for this tool. This tool is also on Unreal Engine marketplace as a free plugin. 
+1) Place TransformChanger Actor in viewport
+
+
+
+
+## Property Explanations
+
+### `CurrentTransformId`
+- **Type**: `int32`
+- **Access**: Editable in the Unreal Editor.
+- **Category**: Configuration
+- **Description**: Represents the index of the current transform being displayed or edited. Set this to `0` for the first transform, `1` for the second, and so on. This allows you to switch between different transforms in the editor for quick adjustments.
+
+### `NumberOfTransforms`
+- **Type**: `int32`
+- **Access**: Visible but not editable in the Unreal Editor.
+- **Category**: Configuration
+- **Description**: Shows the total number of transforms available or configured. This property is automatically updated and provides a quick reference for the number of transforms defined.
+
+### `TransformChangerData`
+- **Type**: `TArray<FTransformChangerData>`
+- **Access**: Editable in the Unreal Editor.
+- **Category**: Configuration
+- **Description**: This is the main configuration array for the transforms associated with each actor. Add actors and their corresponding transforms here to be used by the Transform Changer. Utilize the group adding button feature to streamline the process when configuring multiple actors. This array holds all the necessary data to switch transforms among the specified actors.
