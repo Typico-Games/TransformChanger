@@ -4,29 +4,30 @@ Define and change in real-time any Actors transform in the world. Needs interact
 
 This github repository includes source code for this tool. This tool is also on Unreal Engine marketplace as a free plugin. It is part of tools created for VR game [Next Move](https://www.meta.com/cs-cz/experiences/6785834628189984?ranking_trace=106799090815324_6785834628189984_QUESTSEARCH_1CIOhKO7vzRZvA7Ca_eyJwbGF0Zm9ybSI6ImFuZHJvaWQtNmRvZiIsInF1ZXJ5X3N0cmluZyI6Im5leHQgbW92ZSIsImxvY2FsZSI6ImNzX0NaIiwibnVtX2ZldGNoIjoxMDEsInNlYXJjaF9yb3V0ZSI6IndlYiIsInRhZ19pZHMiOltdfQ%3D%3D_eyJzZWN0aW9uX2tleSI6IlNFQVJDSCJ9) by [Typico Games](https://typicogames.com)
 
-TransformChanger requires ConnectorSystem plugin to install. (connector url) is the docs for the system but in short it allows you to trigger TranformChanger functionality to the fullest. Developers can use it without it.
+TransformChanger requires InteractionSystem plugin to install, but there is no need to use it. InteractionSystem is able connect all plugins from TypicoGames and also provides set of trigger systems. 
+
 # Use Cases
 
 This system enables you to create situations like:
- - falling bridge
- - magical bridge that repositions itself
- - death trap
+ - Shooting target location of door.
+ - Area triggers magical bridge that repositions itself
+ - Custom DeathTrap actor represented by spikes goes up when player steps on platform.
+ - 40 different cubes that are flying in the world will reposition themselfs into platforms when player steps into BoxTrigger
 
 # Base Setup
 
 1. Place TransformChanger Actor in viewport
 2. Group every actor you want to manipulate. Make sure Actors are movable.
-3. Fill GroupActorSelection variable in TransformChanger with desired GroupActor
-4. Press "Add Actors to global selection" button in TransformChanger.
-5. Set CurrentTransformId to 0
-6. Directly in the viewport, apply your preferred transformations to each individual actor added (Actors don't have to be grouped now)
-7. Select TransformChanger in viewport. (Selecting TransformChanger in viewport automatically saves current transform of Actors)
-8. Set CurrentTransformId to 1
-9. Directly in the viewport, apply your preferred transformations to each individual actor added (Actors don't have to be grouped now)
-10. Select TransformChanger in viewport.
-11. Change CurrentTransformId between 0 and 1 in editor and you'll see their two positions. Location is relative to TransformChanger Actor, so you can move TransformChanger Actor to offset desired locations.
-12. Simulate Game.
-13. Press button "SetNextTransform" and you'll see how transforms are switching.
+3. Set CurrentTransformId to 0
+4. Directly in the viewport, apply your preferred transformations to each individual actor added (Actors don't have to be grouped now)
+5. Click on TransformChanger Actor (selecting BP_TransformChanger saves your transforms)
+6. Set CurrentTransformId to 1
+7. Directly in the viewport, apply your preferred transformations to each individual actor added (Actors don't have to be grouped now)
+8. Click on TransformChanger Actor (selecting BP_TransformChanger saves your transforms)
+9. Change CurrentTransformId between 0 and 1 in editor and you'll see the change of your defined transforms.
+10. (Location is relative to TransformChanger Actor, so you can move TransformChanger Actor to offset desired locations.)
+11. Simulate Game.
+12. Press button "SetNextTransform" and you'll see how transforms are switching.
 
 
 Now you can define as many transforms you want to and modify it's behaviour with additional parameters.
