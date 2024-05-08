@@ -32,7 +32,7 @@ This system enables you to create situations like:
 
 Now you can define as many transforms you want to and modify it's behaviour with additional parameters.
 
-When used for your project access SetDesiredTransform function in TransformChanger. It has optional parameter defining desired Transform. If not filled, it has value of -1. That means Switch is made to next transform.
+When used for your project access SetDesiredTransform function in TransformChanger. It has optional parameter defining desired Transform ID. If not filled, it has value of -1. That means TransformChanger switches to next transform.
 
 Function SetNextTransform switches to consequent transform configuration.
 
@@ -41,7 +41,8 @@ SetNextTransform and SetDesiredTransform is also a blueprint node.
 
 # Example Map
 
-In a content there is Example Map, where ChangeTransform function is triggered when player walks into Trigger box. There are several TransformChanger configurations with different use cases.
+- Check content in folder called "Levels".
+- There is a showcase for this tool.
 
 # Sounds
 
